@@ -1,0 +1,66 @@
+body {
+	background-color: #0d1e30;
+	text-align: center;
+	font-family: 'Cabin', sans-serif;
+	color: #f8d8c6;
+}
+
+body a {
+	color: #f8d8c6;
+	text-decoration: none;
+}
+
+body a:hover {
+	font-weight: 700;
+}
+
+.header {
+	width:100vh;
+	padding:20px;
+	margin: 20vh auto 30px auto;
+}
+
+.menu {
+	margin: 30px auto;
+}
+
+.menu table {
+	margin: 0 auto;
+}
+
+.menu td {
+	width: 100px;
+	padding: 10px;
+}
+
+.menu .right {
+	text-align: left;
+}
+
+.menu .left {
+	text-align: right;
+}
+
+.about {
+	width: 500px;
+	margin: 200px auto 50px auto;
+	text-align: justify;
+	line-height: 30px
+}
+
+.logosmall {
+	width: 100vh;
+	margin: 50px auto 80px auto;
+}
+
+.tagline {
+	color: #f27276;
+	margin: 8px auto 0 auto;
+	font-size: 10px;
+	font-weight: 700;
+}
+
+.portrait {
+	margin: 40px auto;
+	text-align: center;
+}
