@@ -1,0 +1,115 @@
+<!doctype html><html lang="en-us"><head>
+<meta charset="utf-8">
+		<title>CAT Mini-portfolio - Jem Walker</title>
+		<link rel="stylesheet" href="css/normalize.css">
+		<link rel="stylesheet" href="css/main.css">
+		<script src="assets/jquery-3.1.1.js"></script>
+		<script src="assets/navsnap.js"></script>
+		<link href="https://fonts.googleapis.com/css?family=Cabin:400,400i,700" rel="stylesheet">
+<style>
+	table {
+	  width:100%;
+	  text-align: center;
+	  margin: 20px auto 0 auto;
+	}
+
+	table img {
+		width: 100px;
+	}
+
+	td {
+	  padding: 5px 0;
+	}
+
+	.pagetitle {
+ 		font-size: 25px;
+ 		text-align: center;
+ 		font-weight: bold;
+ 		color: #ffe066;
+ 		margin-top: 70px;
+ 		margin-bottom: 40px;
+	}
+
+	.porttitle {
+	  font-weight: bold;
+	  text-align: center;
+	  color: #ffe066;
+	}
+
+	.regtitle {
+	  text-align: center;
+	  color: #ffe066;
+	}
+
+	.divider {
+		margin: 40px auto;
+		text-align: center;
+	}
+
+	.code {
+		font-family: monospace;
+		font-size: 12pt;
+	}
+
+</style>
+</head>
+
+<body>
+<div class="about">
+	<div class="portbody"><img src="images/jwheadertrans.svg"></div>
+	<div class="pagetitle">CAT MINI-PORTFOLIO</div>
+	<div class="portbody">This mini-portfolio is the product of a semester-long course in the field of computer-assisted translation (CAT), and demonstrates some of the skills I acquired over the course of the class. It will highlight some important principles in CAT and its applications within the translation industry. It will examine specific examples, as well as a case study of a project completed towards the conclusion of the class.</div>
+	<div class="divider"><img src="images/divider.svg" height="10px"></div>
+	<div class="porttitle">Case Study: Atlantic News Online, Inc.</div>	<div class="divider"></div>
+	<div class="portbody">In the scenario of this project, a fictitious client, an English-language news site looking to expand into a Francophone market, approached our group to commission the translation of five news articles in order to establish an archive. As well as the articles themselves, deliverables included a translation memory and termbase. More information is available in the project files linked below.
+		<table>
+			<tr>
+				<td><a target="_blank" href="https://drive.google.com/open?id=10FDEriqrcXNmYETzLeWitQmD8vrSokpTFd4NFDmjMSA"><img src="pp.png"></a></td>
+				<td><a target="_blank" href="https://drive.google.com/open?id=1ltBHPmBbOpVaL539GzipPAppJ4TFsLI_"><img src="targ.png"></a></td>
+				<td><a target="_blank" href="https://drive.google.com/open?id=1EkY-Qk6jRT8ld2eHh-l7F1S7y8wAzdNegkwObDrHl5g"><img src="lesslearned.png"></a></td>
+			</tr>
+			<tr>
+				<td><a target="_blank" href="https://drive.google.com/open?id=10FDEriqrcXNmYETzLeWitQmD8vrSokpTFd4NFDmjMSA">PROJECT PROPOSAL</a></td>
+				<td><a target="_blank" href="https://drive.google.com/open?id=1ltBHPmBbOpVaL539GzipPAppJ4TFsLI_">DELIVERABLES</a></td>
+				<td><a target="_blank" href="https://drive.google.com/open?id=1EkY-Qk6jRT8ld2eHh-l7F1S7y8wAzdNegkwObDrHl5g">LESSONS LEARNED</a></td>
+			</tr>
+		</table>
+	</div>
+	<div class="divider"><img src="images/divider.svg" height="10px"></div>
+	<div class="porttitle">RegEx tips</div><div class="divider"></div>
+	<div class="portbody">RegEx stands for Regular Expressions, a series of common codes used for the purposes of searching long strings of text in a flexible and customizable way. In the translation field, RegEx can be very useful in larger projects for quality control, when the translator needs to make quick corrections to many errors which cannot necessarily be found by searching a simple text string.</div><div class="divider"></div>
+	<div>Using RegEx, a user can substitute a short code for a certain type of character in the text string to be searched. For example,<span class="code"> \d </span>would return all numeral (digit) characters. More examples and a tool to learn more can be found at <a href="https://regexr.com/">regexr.com</a>.</div>
+	<div class="divider"></div>
+	<div class="portbody">RegEx can be applied in a variety of scenarios specific to translation between French and English. For example:</div>
+		<div class="divider"></div>
+	<div class="regtitle">1. Quotation marks (<i>guillemets</i>)</div>
+		<div class="divider"></div>
+	<div class="portbody"><b>Rule:</b><span class="code"> [«»]</span><br/><b>Direction:</b> French to English</div><div class="divider"></div>
+	<div class="portbody">This expression allows the translator to identify the use of French quotation marks or <i>guillemets</i> (« ») in a text. This is very important for a translation from French into English because English uses a different set of quotation marks (“”).</div><div class="divider"></div>
+	<div class="portbody">In an instance where <i>guillemets</i> may have found their way into an English target text, this expression finds them so that they can be replaced with standard English quotation marks.
+	</div>	<div class="divider"></div>
+	<div class="regtitle">2. 24- vs 12-hour times</div>	<div class="divider"></div>
+	<div class="portbody"><b>Rule:</b><span class="code"> \d{1,2}:\d{2}\s?[apAP]\.?[mM]\.?</span><br/>
+<b>Direction:</b> English to French</div>	<div class="divider"></div>
+<div class="portbody">In France, as in most territories of the world, time is most commonly expressed in a 24-hour format. When translating from English into French it is important to convert the time from the American 12-hour format into 24-hour. This expression will identify any instance of time that was accidentally overlooked in the translation process, and accounts for the presence or absence of periods in A.M. and P.M as well as variations in case.</div><div class="divider"></div>	<div class="divider"></div>
+	<div class="regtitle">3. Overtranslation of phone numbers (conversion to French format)</div>	<div class="divider"></div>
+	<div class="portbody"><b>Rule:</b><span class="code"> (0\d)\s?(\d{2})\s(\d{2})\s(\d{2})\s(\d{2})</span><br/>
+<b>Direction:</b>English to French</div><div class="divider"></div>
+<div class="portbody">This expression identifies all phone numbers written in the French format.</div><div class="divider"></div>
+<div class="portbody">Let’s imagine that a translator is working between a British-English text and a French one, and accidentally overtranslates by converting a British phone number into the French format. While this expression identifies all phone numbers in the French format without being able to determine which are "correct" and which are not, it can be used as a starting point for a translator to double-check their work.</div>	<div class="divider"></div>
+	<div class="regtitle">4. DD/MM date format</div><div class="divider"></div>
+	<div class="portbody"><b>Rule:</b><span class="code"> (\d{0,2})\/(\d{0,3})\/(\d{2,4})</span><br/>
+<b>Direction:</b> English to French, French to English</div><div class="divider"></div><div class="portbody"> The difference between American and French (European) date formats can prove troublesome. The Americans use MM/DD/YYYY and the French use DD/MM/YYYY. This expression will identify all dates written in either format. In many cases, there is no way to say for sure whether a date is in one format or the other (which is why confusions can come about so easily) but this expression, like the previous one, can be used to produce a list of all dates in a text for careful verification.</div>
+<div class="divider"></div>
+	<div class="regtitle">5. French typography rules (e.g. the <i>espace insécable</i>)</div>	<div class="divider"></div>
+	<div class="portbody"><b>Rule:</b><span class="code"> (\D)([?;:!%°])</span><br/><b>
+Direction:</b> English to French 
+</div>	<div class="divider"></div>
+	<div class="portbody">
+French grammar requires an <i>espace insécable</i> (unbreakable space) before certain punctuation marks including ? ; : ! % and °. As this concept does not exist in English grammar and unbreakable and regular spaces look identical unless hidden characters are shown, this small detail can be easily overlooked when working between these two languages. </div>	<div class="divider"></div>
+	<div class="portbody">
+This expression will identify instances in a French translation where the <i>espace insécable</i> has been replaced by a regular space, allowing the translator to quickly locate and fix this error.
+</div>	<div class="divider"></div>
+</div>
+<div class="logosmall"><a href="index.html"><img src="images/logosmall.svg" alt="JEM" height="40px"><div class="tagline">MADE IN COLORADO & CALIFORNIA</div></a></div>
+</body></html>
